@@ -1,11 +1,11 @@
 # Dazzle Async I/O Event Loop
 
-[![Build Status](https://travis-ci.org/dazzle-php/throwable.svg)](https://travis-ci.org/dazzle-php/throwable)
-[![Code Coverage](https://scrutinizer-ci.com/g/dazzle-php/throwable/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/dazzle-php/throwable/?branch=master)
-[![Code Quality](https://scrutinizer-ci.com/g/dazzle-php/throwable/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/dazzle-php/throwable/?branch=master)
-[![Latest Stable Version](https://poser.pugx.org/dazzle-php/throwable/v/stable)](https://packagist.org/packages/dazzle-php/throwable) 
-[![Latest Unstable Version](https://poser.pugx.org/dazzle-php/throwable/v/unstable)](https://packagist.org/packages/dazzle-php/throwable) 
-[![License](https://poser.pugx.org/dazzle-php/throwable/license)](https://packagist.org/packages/dazzle-php/throwable/license)
+[![Build Status](https://travis-ci.org/dazzle-php/loop.svg)](https://travis-ci.org/dazzle-php/loop)
+[![Code Coverage](https://scrutinizer-ci.com/g/dazzle-php/loop/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/dazzle-php/loop/?branch=master)
+[![Code Quality](https://scrutinizer-ci.com/g/dazzle-php/loop/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/dazzle-php/loop/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/dazzle-php/loop/v/stable)](https://packagist.org/packages/dazzle-php/loop) 
+[![Latest Unstable Version](https://poser.pugx.org/dazzle-php/loop/v/unstable)](https://packagist.org/packages/dazzle-php/loop) 
+[![License](https://poser.pugx.org/dazzle-php/loop/license)](https://packagist.org/packages/dazzle-php/loop/license)
 
 <br>
 <p align="center">
@@ -60,5 +60,5 @@ Thank you for considering contributing to this repository! The contribution guid
 
 Dazzle Framework is open-sourced software licensed under the [MIT license][2].
 
-[1]: https://github.com/dazzle-php/throwable/blob/master/CONTRIBUTING.md
+[1]: https://github.com/dazzle-php/loop/blob/master/CONTRIBUTING.md
 [2]: http://opensource.org/licenses/MIT
