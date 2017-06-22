@@ -1,19 +1,20 @@
-# Kraken Loop Component
+# Dazzle Async I/O Event Loop
 
-[![Build Status](https://travis-ci.org/kraken-php/framework.svg)](https://travis-ci.org/kraken-php/framework)
-[![Total Downloads](https://poser.pugx.org/kraken-php/loop/downloads)](https://packagist.org/packages/kraken-php/loop) 
-[![Latest Stable Version](https://poser.pugx.org/kraken-php/loop/v/stable)](https://packagist.org/packages/kraken-php/loop) 
-[![Latest Unstable Version](https://poser.pugx.org/kraken-php/loop/v/unstable)](https://packagist.org/packages/kraken-php/loop) 
-[![License](https://poser.pugx.org/kraken-php/framework/license)](https://packagist.org/packages/kraken-php/framework)
-[![Kraken Compatible](https://img.shields.io/badge/kraken-compatible-6b02af.svg)](https://github.com/kraken-php/framework)
+[![Build Status](https://travis-ci.org/dazzle-php/throwable.svg)](https://travis-ci.org/dazzle-php/throwable)
+[![Code Coverage](https://scrutinizer-ci.com/g/dazzle-php/throwable/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/dazzle-php/throwable/?branch=master)
+[![Code Quality](https://scrutinizer-ci.com/g/dazzle-php/throwable/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/dazzle-php/throwable/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/dazzle-php/throwable/v/stable)](https://packagist.org/packages/dazzle-php/throwable) 
+[![Latest Unstable Version](https://poser.pugx.org/dazzle-php/throwable/v/unstable)](https://packagist.org/packages/dazzle-php/throwable) 
+[![License](https://poser.pugx.org/dazzle-php/throwable/license)](https://packagist.org/packages/dazzle-php/throwable/license)
 
-> **Note:** This repository is a part of [Kraken Framework][3], but **can be used freely as standalone library**. If you 
-are interested in more asynchronous components for PHP, check out the rest of [Kraken repository][5] or see our 
-[asynchronous application skeleton][4] example.
+<br>
+<p align="center">
+<img src="https://avatars0.githubusercontent.com/u/29509136?v=3&s=150" />
+</p>
 
 ## Description
 
-Loop is a component that provides abstraction layer for writing asynchronous code in PHP on single thread or process
+Dazzle Loop is a component that provides abstraction layer for writing asynchronous code in PHP on single thread or process
 with usage of single or multiple loops.
 
 ## Feature Highlights
@@ -28,16 +29,11 @@ Loop features:
 * ~~Support for LibEvent -based loops~~,
 * ~~Support for LibEv -based loops~~,
 * ~~Support for ExtEvent -based loops~~,
-* Support for using multiple loops with multiple execution flows,
-* Support for switching between loops and importing/exporting its unfinished queues,
+* Support for combining multiple loops and managing them from one wrapper,
+* Support for switching between multiple execution flows,
 * ReactPHP compatibility,
-* ReactPHP EventLoop adapters,
-* Kraken Framework compatibility,
+* ReactPHP Event-Loop adapters,
 * ...and more.
-
-## Examples
-
-See more examples in [official documentation][2].
 
 ## Requirements
 
@@ -47,27 +43,22 @@ See more examples in [official documentation][2].
 ## Installation
 
 ```
-composer require kraken-php/loop
+$> composer require dazzle-php/loop
 ```
 
 ## Tests
 
-Tests are provided within our write-only [Framework repository][3].
-
-## Documentation
-
-Documentation for this module can be found in the [official documentation][2].
+```
+$> vendor/bin/phpunit -d memory_limit=1024M
+```
 
 ## Contributing
 
-This library is read-only subtree split of Kraken Framework. To make contributions, please go to [Framework repository][3].
+Thank you for considering contributing to this repository! The contribution guide can be found in the [contribution tips][1].
 
 ## License
 
-This library licensed under the MIT license, see more information in [Kraken Framework][3] license section.
+Dazzle Framework is open-sourced software licensed under the [MIT license][2].
 
-[1]: http://kraken-php.com
-[2]: http://kraken-php.com/docs/api-log
-[3]: https://github.com/kraken-php/framework
-[4]: https://github.com/kraken-php/kraken
-[5]: https://github.com/kraken-php
+[1]: https://github.com/dazzle-php/throwable/blob/master/CONTRIBUTING.md
+[2]: http://opensource.org/licenses/MIT

@@ -1,0 +1,13 @@
+<?php
+
+namespace Dazzle\Loop;
+
+interface LoopGetterAwareInterface
+{
+    /**
+     * Return the loop of which object is aware of or null if none was set.
+     *
+     * @return LoopInterface|null
+     */
+    public function getLoop();
+}
