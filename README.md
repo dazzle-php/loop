@@ -54,7 +54,22 @@ $loop->start();
 
 ### Additional
 
-TODO
+Additional examples can be found in [example](https://github.com/dazzle-php/loop/tree/master/example) directory. Below is the list of provided examples as a reference and preferred consumption order:
+
+- [Quickstart](https://github.com/dazzle-php/loop/blob/master/example/loop_quickstart.php)
+- [Using Loop start/stop events](https://github.com/dazzle-php/loop/blob/master/example/loop_using_events.php)
+- [Scheduling simple timers](https://github.com/dazzle-php/loop/blob/master/example/loop_using_simple_timers.php)
+- [Scheduling periodic timers](https://github.com/dazzle-php/loop/blob/master/example/loop_using_periodic_timers.php)
+- [Scheduling periodic timers with manual control](https://github.com/dazzle-php/loop/blob/master/example/loop_using_periodic_timers_controls.php)
+- [Cancelling timers](https://github.com/dazzle-php/loop/blob/master/example/loop_cancelling_timers.php)
+- [Cancelling timers alternatively](https://github.com/dazzle-php/loop/blob/master/example/loop_cancelling_timers_alternative.php)
+- [Queueing tick listeners](https://github.com/dazzle-php/loop/blob/master/example/loop_listening_on_ticks.php)
+- [Queueing tick listeners to begin/end of queue](https://github.com/dazzle-php/loop/blob/master/example/loop_listening_on_ticks_all.php)
+- [Using streams asynchronously - pt 1](https://github.com/dazzle-php/loop/blob/master/example/loop_io_stream_source.php)
+- [Using streams asynchronously - pt 2](https://github.com/dazzle-php/loop/blob/master/example/loop_io_stream_pipe.php)
+- [__Advanced:__  Implementing simple HTTP server](https://github.com/dazzle-php/loop/blob/master/example/loop_http_server.php)
+
+If any of the above examples has left you confused, please take a look in the [tests](https://github.com/dazzle-php/loop/tree/master/test) directory as well.
 
 ## Requirements
 
