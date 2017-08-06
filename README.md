@@ -32,15 +32,25 @@ Dazzle Loop features:
 * ~~Support for ExtEvent -based loops~~,
 * Support for combining multiple loops and managing them from one wrapper,
 * Support for switching between multiple execution flows,
-* ReactPHP compatibility,
 * ReactPHP Event-Loop adapters,
+* ReactPHP compatibility,
 * ...and more.
 
 ## Provided Example(s)
 
 ### Quickstart
 
-TODO
+This example shows implementation of non-blocking clock using loop:
+
+```php
+$loop = new Loop();
+
+$loop->addPeriodicTimer(1, function() {
+    printf("\rCurrent clock: %s", date('Y-m-d H:i:s'));
+});
+
+$loop->start();
+```
 
 ### Additional
 
@@ -71,7 +81,7 @@ $> vendor/bin/phpunit -d memory_limit=1024M
 
 ## Versioning
 
-Versioning of Dazzle libraries is being shared between all packages included in [Dazzle Project](https://github.com/dazzle-php/dazzle). That means the releases are being made concurrently for all of them. On one hand this might lead to "empty" releases for some packages at times, but don't worry. In the end it is far much easier for contributors to maintain and -- what's the most important -- much more straight-forward for users to understand the compatibility and inter-operability of the packages.
+Versioning of Dazzle libraries is described in versioning section of [Dazzle Project](https://github.com/dazzle-php/dazzle) index repository. Please, refer there for detailed information on the subject.
 
 ## Contributing
 
@@ -90,4 +100,3 @@ Dazzle Loop is open-sourced software licensed under the [MIT license](http://ope
 <p align="center">
 <i>"Everything is possible. The impossible just takes longer."</i> ― Dan Brown
 </p>
-
