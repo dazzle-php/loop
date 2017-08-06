@@ -15,6 +15,11 @@ class ReactTimerTest extends TUnit
      */
     public function testApiGetActualTimer_ReturnsTimerPassedInConstructor()
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $timer = $this->createTimerMock();
         $react = new ReactTimer($timer);
 
@@ -26,6 +31,11 @@ class ReactTimerTest extends TUnit
      */
     public function testApiGetLoop_ReturnsReactLoop()
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $react = $this->createApiMethodMock(
             'getLoop',
             function() {
@@ -41,6 +51,11 @@ class ReactTimerTest extends TUnit
      */
     public function testApiGetInterval_ReturnsProperInterval()
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $interval = 1e-23;
         $react = $this->createApiMethodMock(
             'getInterval',
@@ -57,6 +72,11 @@ class ReactTimerTest extends TUnit
      */
     public function testApiGetCallback_ReturnsProperCallback()
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $callback = $this->createCallableMock();
         $react = $this->createApiMethodMock(
             'getCallback',
@@ -73,6 +93,11 @@ class ReactTimerTest extends TUnit
      */
     public function testApiSetData_PassesProperParameters()
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $expectedData = $this->getMock('StdClass');
         $react = $this->createApiMethodMock(
             'setData',
@@ -89,6 +114,11 @@ class ReactTimerTest extends TUnit
      */
     public function testApiGetData_ReturnsProperData()
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $expectedData = $this->getMock('StdClass');
         $react = $this->createApiMethodMock(
             'getData',
@@ -105,6 +135,11 @@ class ReactTimerTest extends TUnit
      */
     public function testApiIsPeriodic_CallsActualIsPeriodic($bool)
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $react = $this->createApiMethodMock(
             'isPeriodic',
             function() use($bool) {
@@ -120,6 +155,11 @@ class ReactTimerTest extends TUnit
      */
     public function testApiIsActive_CallsActualIsActive($bool)
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $react = $this->createApiMethodMock(
             'isActive',
             function() use($bool) {
@@ -135,6 +175,11 @@ class ReactTimerTest extends TUnit
      */
     public function testApiCancel_CallsActualCancel()
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $react = $this->createApiMethodMock(
             'cancel',
             function() {}

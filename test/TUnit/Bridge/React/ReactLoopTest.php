@@ -27,6 +27,11 @@ class ReactLoopTest extends TUnit
      */
     public function testApiGetActualLoop_ReturnsLoopPassedInConstructor()
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            return $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $loop = $this->createLoopMock();
         $react = new ReactLoop($loop);
         $this->assertSame($loop, $react->getActualLoop());
@@ -37,6 +42,11 @@ class ReactLoopTest extends TUnit
      */
     public function testApiAddReadStream_PassesProperParameters()
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            return $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $stream = $this->createMemoryStream();
         $listener = $this->createCallableMock();
 
@@ -56,6 +66,11 @@ class ReactLoopTest extends TUnit
      */
     public function testApiAddWriteStream_PassesProperParameters()
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            return $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $stream = $this->createMemoryStream();
         $listener = $this->createCallableMock();
 
@@ -75,6 +90,11 @@ class ReactLoopTest extends TUnit
      */
     public function testApiRemoveReadStream_PassesProperParameters()
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $stream = $this->createMemoryStream();
 
         $react = $this->createApiMethodMock(
@@ -92,6 +112,11 @@ class ReactLoopTest extends TUnit
      */
     public function testApiRemoveWriteStream_PassesProperParameters()
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $stream = $this->createMemoryStream();
 
         $react = $this->createApiMethodMock(
@@ -109,6 +134,11 @@ class ReactLoopTest extends TUnit
      */
     public function testApiRemoveStream_PassesProperParameters()
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $stream = $this->createMemoryStream();
 
         $react = $this->createApiMethodMock(
@@ -126,6 +156,11 @@ class ReactLoopTest extends TUnit
      */
     public function testApiAddTimer_PassesProperParameters()
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $interval = 5e-1;
         $callback = $this->createCallableMock();
 
@@ -148,6 +183,11 @@ class ReactLoopTest extends TUnit
      */
     public function testApiAddTimer_ReturnsReactTimer()
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $interval = 5e-1;
         $callback = $this->createCallableMock();
 
@@ -171,6 +211,11 @@ class ReactLoopTest extends TUnit
      */
     public function testApiAddPeriodicTimer_PassesProperParameters()
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $interval = 5e-1;
         $callback = $this->createCallableMock();
 
@@ -193,6 +238,11 @@ class ReactLoopTest extends TUnit
      */
     public function testApiAddPeriodicTimer_ReturnsReactTimer()
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $interval = 5e-1;
         $callback = $this->createCallableMock();
 
@@ -216,6 +266,11 @@ class ReactLoopTest extends TUnit
      */
     public function testCancelTimer_CallsActualCancelTimer()
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $mockedTimer = $this->getMock(
             \Dazzle\Loop\Timer\TimerInterface::class
         );
@@ -244,6 +299,11 @@ class ReactLoopTest extends TUnit
      */
     public function testApiIsTimerActive_CallsActualIsTimerActive()
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $mockedTimer = $this->getMock(
             \Dazzle\Loop\Timer\TimerInterface::class
         );
@@ -272,6 +332,11 @@ class ReactLoopTest extends TUnit
      */
     public function testApiNextTick_PassesProperParamters()
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $listener = $this->createCallableMock();
 
         $react = $this->createApiMethodMock(
@@ -289,6 +354,11 @@ class ReactLoopTest extends TUnit
      */
     public function testApiFutureTick_PassesProperParamters()
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $listener = $this->createCallableMock();
 
         $react = $this->createApiMethodMock(
@@ -306,6 +376,11 @@ class ReactLoopTest extends TUnit
      */
     public function testApiTick_NeverTicksLoop()
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $this->markTestSkipped(
             'Seems there is a problem with PHPUnit 5.2 compatibility here.'
         );
@@ -325,6 +400,11 @@ class ReactLoopTest extends TUnit
      */
     public function testApiRun_NeverRunsLoop()
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $this->markTestSkipped(
             'Seems there is a problem with PHPUnit 5.2 compatibility here.'
         );
@@ -344,6 +424,11 @@ class ReactLoopTest extends TUnit
      */
     public function testApiStop_NeverStopsLoop()
     {
+        if (!interface_exists('React\EventLoop\LoopInterface'))
+        {
+            $this->markTestSkipped('This test requires React\EventLoop instance to work');
+        }
+
         $this->markTestSkipped(
             'Seems there is a problem with PHPUnit 5.2 compatibility here.'
         );
