@@ -3,6 +3,7 @@
 namespace Dazzle\Loop;
 
 use Dazzle\Loop\Flow\FlowController;
+use Dazzle\Loop\Model\SelectLoop;
 use Dazzle\Loop\Timer\TimerInterface;
 
 class Loop implements LoopExtendedInterface
@@ -15,9 +16,9 @@ class Loop implements LoopExtendedInterface
     /**
      * @param LoopModelInterface
      */
-    public function __construct(LoopModelInterface $loop)
+    public function __construct(LoopModelInterface $loop = null)
     {
-        $this->loop = $loop;
+        $this->loop = $loop === null ? new SelectLoop() : $loop;
     }
 
     /**
