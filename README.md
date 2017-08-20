@@ -71,6 +71,50 @@ Additional examples can be found in [example](https://github.com/dazzle-php/loop
 
 If any of the above examples has left you confused, please take a look in the [tests](https://github.com/dazzle-php/loop/tree/master/test) directory as well.
 
+## Comparison
+
+This section contains Dazzle vs React comparison many users requested. If you are wondering why this section has been created, see the [author's note](https://github.com/dazzle-php/dazzle/blob/master/NOTE.md).
+
+#### Performance
+
+<br>
+<p align="center">
+<img src="https://raw.githubusercontent.com/dazzle-php/loop/master/media/graph-perf-cpu.png" />
+</p>
+
+The detailed information about this benchmark can be found in [benchmark-on.php](https://github.com/dazzle-php/loop/blob/master/example-bench/benchmark.php) and [benchmark-react.php](https://github.com/dazzle-php/loop/blob/master/example-bench/benchmark-react.php) files.
+
+#### Memory Allocation Efficiency
+
+<br>
+<p align="center">
+<img src="https://raw.githubusercontent.com/dazzle-php/loop/master/media/graph-perf-mem.png" />
+</p>
+
+The detailed information about this benchmark can be found in [benchmark-once.php](https://github.com/dazzle-php/loop/blob/master/example-bench/benchmark.php) and [benchmark-react.php](https://github.com/dazzle-php/loop/blob/master/example-bench/benchmark-react.php) files.
+
+#### Details
+
+| Detail | Dazzle Event | React-equivalent |
+| :--- | :---: | :---: |
+| Active support | X | ? |
+| Provided well-formed documentation | X | X |
+| Provided well-formed set of tests with at least 80% coverage and API examples | X | X |
+| Support for executing event ticks | X | X |
+| Support for before and after event ticks listeners | X | X |
+| Support for timers | X | X |
+| Support for periodic timers | X | X | 
+| Asynchronous writing of streams | X | X |
+| Asynchronous reading of streams | X | X |
+| Cancelling timers | X | X |
+| Implemented stream model | X | X |
+| Implemented lib-event model | WIP | X |
+| Implemented lib-ev model | WIP | X |
+| Implemented ext-event model | WIP | X |
+| Support for state change events | X | |
+| Support for flow controls | X | |
+| Support for multiple flows and switching between active ones | X | |
+
 ## Requirements
 
 Loop requires:
